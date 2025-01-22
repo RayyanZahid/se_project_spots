@@ -1,0 +1,31 @@
+.profile {
+  display: flex;
+  padding: 34px 0 20px;
+  border-bottom: 1px solid #21212166;
+}
+
+.profile__avatar {
+  margin-right: 20px;
+}
+
+.profile__name {
+  margin: 0 0 12px;
+  padding: 0;
+}
+
+.profile__description {
+  margin: 0;
+}
+
+.profile__column {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile__edt-button {
+  margin-top: auto;
+}
+
+.profile__add-button {
+  margin-left: auto;
+}
