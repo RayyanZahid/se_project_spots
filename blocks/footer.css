@@ -1,0 +1,8 @@
+.footer {
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  padding: 60px 0;
+  color: #121212;
+  opacity: 70%;
+}
