@@ -36,16 +36,20 @@ This project implements responsive design principles to provide a seamless exper
 
 ## 📐 Design
 
-- **Desktop**: Maximum width of 1280px with a 3-column card layout.
+- **Desktop**: Maximum width of 1440px with a 3-column card layout.
 - **Tablet**: 2-column card layout with adjusted margins and spacing.
 - **Mobile**: Single-column layout with optimized text and button sizes.
 - **Typography**: Fonts from the Poppins family, styled for readability.
+
+**Figma**
+
+- [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
 
 ---
 
 ## 🌍 Deployment
 
-View the live project here: [Spots Web Application](https://yourusername.github.io/se_project_spots/)
+View the live project here: [Spots Web Application](https://rayyanzahid.github.io/se_project_spots/)
 
 ---
 
@@ -53,21 +57,19 @@ View the live project here: [Spots Web Application](https://yourusername.github.
 
 ### Desktop View
 
-![Desktop View](./screenshots/desktop-view.png)
+![Desktop View](./screenshots/desktop-view.JPG)
 
-### Tablet View
-
-![Tablet View](./screenshots/tablet-view.png)
+![Tablet View](./screenshots/tablet-view.JPG)
 
 ### Mobile View
 
-![Mobile View](./screenshots/mobile-view.png)
+![Mobile View](./screenshots/mobile-view.JPG)
 
 ---
 
 ## 📽️ Video Walkthrough
 
-Watch a detailed walkthrough of the project: [Video Link](https://drive.google.com/your-video-link)
+Watch a detailed walkthrough of the project: [Video Link](https://www.loom.com/share/6561c09550bf4615acb46296e97eefc3?sid=b0e63778-d074-4259-a46b-7cec8c2c5337)
 
 ---
 
@@ -91,27 +93,5 @@ Watch a detailed walkthrough of the project: [Video Link](https://drive.google.c
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/se_project_spots.git
+   git clone https://github.com/rayyanzahid/se_project_spots.git
    ```
-
-# Project 3: Spots
-
-### Overview
-
-- Intro
-- Figma
-- Images
-
-**Intro**
-
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.
-
-**Figma**
-
-- [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
-
-**Images**
-
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster.
-
-Good luck and have fun!
