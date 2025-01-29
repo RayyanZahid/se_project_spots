@@ -18,6 +18,7 @@
   line-height: 24px;
   text-align: left;
   color: #212121;
+  margin: 0;
 
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -44,5 +45,11 @@
 @media screen and (max-width: 650px) {
   .card__image {
     height: 288px;
+    margin-bottom: 12px;
+  }
+
+  .card__title {
+    font-size: 16px;
+    line-height: 16px;
   }
 }
