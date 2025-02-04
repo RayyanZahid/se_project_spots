@@ -1,27 +1,27 @@
 const initialCards = [
   {
     name: "Val Thorens",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/1-photo-by-moritz-feldmann-from-pexels.jpg",
+    link: "./images/1-photo-by-moritz-feldmann-from-pexels.jpg",
   },
   {
     name: "Restaurant terrace",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/1-photo-by-moritz-feldmann-from-pexels.jpg",
+    link: "./images/2-photo-by-ceiline-from-pexels.jpg",
   },
   {
     name: "An outdoor cafe",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/1-photo-by-moritz-feldmann-from-pexels.jpg",
+    link: "./images/3-photo-by-tubanur-dogan-from-pexels.jpg",
   },
   {
     name: "A very long bridge, over the forest and through the trees",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/1-photo-by-moritz-feldmann-from-pexels.jpg",
+    link: "./images/4-photo-by-maurice-laschet-from-pexels.jpg",
   },
   {
     name: "Tunnel with morning light",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/1-photo-by-moritz-feldmann-from-pexels.jpg",
+    link: "./images/5-photo-by-van-anh-nguyen-from-pexels.jpg",
   },
   {
     name: "Mountain house",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/1-photo-by-moritz-feldmann-from-pexels.jpg",
+    link: "./images/6-photo-by-moritz-feldmann-from-pexels.jpg",
   },
 ];
 
@@ -64,3 +64,17 @@ function handleEventFormSubmit(event) {
 editButton.addEventListener("click", openModal); //Listen to open form
 closeModalButton.addEventListener("click", closeModal); //Listen to close form
 editFormElement.addEventListener("submit", handleEventFormSubmit); //Listen for form submission
+
+const cardList = document.querySelector(".cards__list");
+
+for (cardData of initialCards) {
+  const cardTemplate = document
+    .querySelector("#template-card")
+    .content.cloneNode(true);
+
+  cardTemplate.querySelector(".card__title").textContent = cardData["name"];
+  cardTemplate.querySelector(".card__image").src = cardData["link"];
+  cardTemplate.querySelector(".card__image").alt = cardData["name"];
+
+  cardList.append(cardTemplate);
+}
