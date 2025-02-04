@@ -27,20 +27,23 @@ const initialCards = [
 
 console.log(initialCards);
 
-let editButton = document.querySelector(".profile__edt-button"); //select edit button
-let editModal = document.querySelector("#edit-modal"); //select edit button
-let closeModalButton = document.querySelector(".modal__close-button"); //find close buton for modal
-let editFormElement = document.querySelector(".modal__form"); //find modal form
+const editButton = document.querySelector(".profile__edt-button"); //select edit button
+const editModal = document.querySelector("#edit-modal"); //finds modal box
+const closeModalButton = document.querySelector(".modal__close-button"); //find close buton for modal
+const editFormElement = document.forms["profile-form"]; //find modal form
 
-let profileName = document.querySelector(".profile__name"); // Save profile name html
-let profileDescription = document.querySelector(".profile__description"); // Save profile description html
+const profileName = document.querySelector(".profile__name"); // Save profile name html
+const profileDescription = document.querySelector(".profile__description"); // Save profile description html
 
-let inputPlaceholderData = document.querySelectorAll(".modal__input"); // find list of classes where inputs are done in modal
+const nameInput = editModal.querySelector("#name");
+const descriptionInput = editModal.querySelector("#description");
+
+const cardList = document.querySelector(".cards__list");
 
 function openModal() {
   //Sets default value of fields same as the profile
-  inputPlaceholderData[0].setAttribute("value", profileName.textContent);
-  inputPlaceholderData[1].setAttribute("value", profileDescription.textContent);
+  nameInput.setAttribute("value", profileName.textContent);
+  descriptionInput.setAttribute("value", profileDescription.textContent);
 
   editModal.classList.add("modal_opened");
 }
@@ -52,11 +55,8 @@ function closeModal() {
 function handleEventFormSubmit(event) {
   event.preventDefault();
 
-  let inputName = editFormElement.querySelector("#name").value;
-  let inputDescription = editFormElement.querySelector("#description").value;
-
-  profileName.textContent = inputName;
-  profileDescription.textContent = inputDescription;
+  profileName.textContent = nameInput.value;
+  profileDescription.textContent = descriptionInput.value;
 
   closeModal();
 }
@@ -65,16 +65,21 @@ editButton.addEventListener("click", openModal); //Listen to open form
 closeModalButton.addEventListener("click", closeModal); //Listen to close form
 editFormElement.addEventListener("submit", handleEventFormSubmit); //Listen for form submission
 
-const cardList = document.querySelector(".cards__list");
+const cardTemplate = document.querySelector("#template-card");
+
+function getCardElement(item) {
+  const cardElement = cardTemplate.content
+    .querySelector(".card")
+    .cloneNode(true);
+
+  cardElement.querySelector(".card__title").textContent = item["name"];
+  cardElement.querySelector(".card__image").src = item["link"];
+  cardElement.querySelector(".card__image").alt = item["name"];
+
+  return cardElement;
+}
 
 for (cardData of initialCards) {
-  const cardTemplate = document
-    .querySelector("#template-card")
-    .content.cloneNode(true);
-
-  cardTemplate.querySelector(".card__title").textContent = cardData["name"];
-  cardTemplate.querySelector(".card__image").src = cardData["link"];
-  cardTemplate.querySelector(".card__image").alt = cardData["name"];
-
-  cardList.append(cardTemplate);
+  const newCard = getCardElement(cardData);
+  cardList.append(newCard);
 }
