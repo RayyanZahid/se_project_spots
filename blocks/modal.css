@@ -107,62 +107,6 @@
   opacity: 30%;
 }
 
-/* .modal__header {
-  display: flex;
-  padding-bottom: 32px;
-}
-
-.modal__cross {
-  opacity: 70%;
-  cursor: pointer;
-}
-
- */
-/* } */
-/*
-.modal__text {
-  font-size: 16px;
-  opacity: 70%;
-  margin: 0 0 8px 0;
-}
-
-.modal__input {
-  width: 100%;
-  border-radius: 8px;
-  border-width: 1px;
-  opacity: 30%;
-  stroke: 10px;
-
-  margin: 0 0 32px;
-  padding: 16px 12px;
-  font-size: 20px;
-
-  font-family: poppins, Arial, Helvetica, sans-serif;
-  font-weight: 500;
-}
-
-.modal__input:hover {
-  opacity: 100%;
-  cursor: pointer;
-}
-
-.modal__save-button {
-  padding: 18px 24px;
-  border: transparent 0;
-  border-radius: 8px;
-
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 16px;
-  color: #fcf5e5;
-  background: #212121;
-}
-
-.modal__save-button:hover {
-  opacity: 80%;
-  cursor: pointer;
-} */
-
 .modal_opened {
   visibility: visible;
 }
