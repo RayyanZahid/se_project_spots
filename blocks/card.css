@@ -11,6 +11,7 @@
   object-fit: cover;
   display: block;
   margin-bottom: 12px;
+  cursor: pointer;
 }
 
 .card__title {
@@ -26,6 +27,7 @@
   overflow: hidden;
 
   max-width: 389px;
+  cursor: pointer;
 }
 
 .card__like-button {
@@ -41,6 +43,15 @@
 .card__like-button:hover {
   opacity: 100%;
   cursor: pointer;
+}
+
+.card__like-button_liked {
+  background-image: url(../images/heart_filled.svg);
+  opacity: 100%;
+}
+
+.card__like-button_liked:hover {
+  opacity: 50%;
 }
 
 @media screen and (max-width: 650px) {
