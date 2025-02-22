@@ -121,6 +121,7 @@ function getCardElement(item) {
     .querySelector(".card")
     .cloneNode(true);
 
+  const cardDeleteBtn = cardElement.querySelector(".card__delete-button");
   const cardLikeBtn = cardElement.querySelector(".card__like-button");
   const cardImageEl = cardElement.querySelector(".card__image");
 
@@ -130,6 +131,10 @@ function getCardElement(item) {
 
   cardLikeBtn.addEventListener("click", () => {
     cardLikeBtn.classList.toggle("card__like-button_liked");
+  });
+
+  cardDeleteBtn.addEventListener("click", () => {
+    cardElement.remove();
   });
 
   cardImageEl.addEventListener("click", () => {
